@@ -13,6 +13,8 @@ def weight(mass, gravity=STANDARD_EARTH_GRAVITY):
     :param gravity in m/s²
     :return: weight in Newton (N)
     """
+    if type(mass) not in [int, float] or type(gravity) not in [int, float]:
+        raise TypeError("Use int or float!")
     return mass * gravity
 
 
