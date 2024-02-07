@@ -2,7 +2,7 @@
 Mechanic equations
 https://physics.info/equations/#eq-mechanics
 """
-from .constants import STANDARD_EARTH_GRAVITY
+from constants import STANDARD_EARTH_GRAVITY
 
 
 def weight(mass, gravity=STANDARD_EARTH_GRAVITY):
