@@ -26,6 +26,8 @@ def velocity(delta_displacement, delta_time):
     :param delta_time: in second
     :return: velocity in meters per second
     """
+    if type(delta_displacement) not in [int, float] or type(delta_time) not in [int, float]:
+        raise TypeError("Use int or float!")
     return delta_displacement / delta_time
 
 def acceleration(delta_velocity, delta_time):
@@ -35,6 +37,8 @@ def acceleration(delta_velocity, delta_time):
     :param delta_time: in seconds
     :return: acceleration in m/s²
     """
+    if type(delta_velocity) not in [int, float] or type(delta_time) not in [int, float]:
+        raise TypeError("Use int or float!")
     return delta_velocity / delta_time
 
 def newton_second(mass, acceleration):
@@ -44,6 +48,8 @@ def newton_second(mass, acceleration):
     :param acceleration in m/s²
     :return: Force in Newton
     """
+    if type(mass) not in [int, float] or type(acceleration) not in [int, float]:
+        raise TypeError("Use int or float!")
     return mass * acceleration
 
 def momentum(mass, velocity):
@@ -53,6 +59,8 @@ def momentum(mass, velocity):
     :param velocity: in m/s
     :return: momentum in kg*m/s
     """
+    if type(mass) not in [int, float] or type(velocity) not in [int, float]:
+        raise TypeError("Use int ot float!")
     return mass * velocity
 
 def kinetic_energy(mass, velocity):
@@ -62,6 +70,8 @@ def kinetic_energy(mass, velocity):
     ;param velocity in m/s
     :return: kinetic_energy in Joules
     """
+    if type(mass) not in [int, float] or type(velocity) not in [int, float]:
+        raise TypeError("Use int or float!")
     return (0.5) * mass * velocity**2
 
 def density(mass, Volume):
@@ -71,6 +81,8 @@ def density(mass, Volume):
     :param Volume in m**3
     :return: density in kg/m**3
     """
+    if type(mass) not in [int, float] or type(Volume) not in [int, float]:
+        raise TypeError("Use int or float!")
     return mass / Volume
 
 def pressure(Force, area):
@@ -80,4 +92,6 @@ def pressure(Force, area):
     :param area in m**2
     :return: pressure in pascal
     """
+    if type(Force) not in [int, float] or type(area) not in [int, float]:
+        raise TypeError("Use int or float!")
     return Force / area
