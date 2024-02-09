@@ -95,3 +95,55 @@ def pressure(Force, area):
     if type(Force) not in [int, float] or type(area) not in [int, float]:
         raise TypeError("Use int or float!")
     return Force / area
+
+"""
+equations of motion formula
+"""
+
+def velocity_with_time(velocity_at_the_beginnig, acceleration, time):
+    """
+    https://physics.info/equations/#eq-mechanics
+    :param velocity_at_the_beginnig in m/s
+    :param acceleration in m/s**2
+    :param time in s
+    :return velocity_with_time in m/s
+    """
+    if type(velocity_at_the_beginnig) not in [int, float] or type(acceleration) not in [int, float] or type(time) not in [int, float]:
+        raise TypeError("Use int or float!")
+    return velocity_with_time in m/s
+
+def displacement_with_acceleration(velocity_at_the_beginnig, acceleration, time):
+    """
+    https://physics.info/equations/#eq-mechanics
+    :param velocity_at_the_beginnig in m/s
+    :param acceleration in m/s**2
+    :param time in s
+    :return displacement_with_acceleration in meter
+    """
+    if type(velocity_at_the_beginnig) not in [int, float] or type(acceleration) not in [int, float] or type(time):
+        raise TypeError("Use int or float!")
+    return (velocity_at_the_beginnig * time) + ((0.5) * acceleration * time**2)
+
+def velocity_without_time(velocity_at_the_beginnig, displacement, acceleration):
+    """
+    https://physics.info/equations/#eq-mechanics
+    :param velocity_at_the_beginnig in m/s
+    :param displacement in meter
+    :param acceleration in m/s**2
+    :return velocity_without_time in m/s
+    """
+    if type(velocity_at_the_beginnig) not in [int, float] or type(displacement) not in [int, float] or type(acceleration) not in [int, float]:
+        raise TypeError("Use int or float")
+    return (velocity_at_the_beginnig**2) + (2 * acceleration * displacement)
+
+def displacement_with_time(velocity_at_the_beginnig, velocity_at_the_end, time):
+    """
+    https://physics.info/equations/#eq-mechanics
+    :param velocity_at_the_beginnig in m/s
+    :param velocity_at_the_end in m/s
+    :param time in s
+    :return displacement_with_time in meter
+    """
+    if type(velocity_at_the_beginnig) not in [int, float] or type(velocity_at_the_end) not in [int, float] or type(time) not in [int, float]:
+        raise TypeError("Use int or float")
+    return ((velocity_at_the_beginnig + velocity_at_the_end)*(0.5) / 2)
