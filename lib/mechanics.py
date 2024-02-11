@@ -3,7 +3,7 @@ Mechanic equations
 https://physics.info/equations/#eq-mechanics
 """
 
-from constants import STANDARD_EARTH_GRAVITY
+from .constants import STANDARD_EARTH_GRAVITY, ALLOWED_ARG_TYPES
 
 
 def weight(mass, gravity=STANDARD_EARTH_GRAVITY):
@@ -27,7 +27,7 @@ def velocity(delta_displacement, delta_time):
     :param delta_time: in second
     :return: velocity in meters per second
     """
-    if type(delta_displacement) not in [int, float] or type(delta_time) not in [int, float]:
+    if type(delta_displacement) not in ALLOWED_ARG_TYPES or type(delta_time) not in ALLOWED_ARG_TYPES:
         raise TypeError("Use int or float!")
     return delta_displacement / delta_time
 
@@ -49,7 +49,7 @@ def newton_second(mass, acceleration):
     :param acceleration in m/s²
     :return: Force in Newton
     """
-    if type(mass) not in [int, float] or type(acceleration) not in [int, float]:
+    if not all( [ type(p) in ALLOWED_ARG_TYPES for p in [mass, acceleration] ] ):
         raise TypeError("Use int or float!")
     return mass * acceleration
 
