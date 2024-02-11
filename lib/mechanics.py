@@ -82,8 +82,6 @@ def density(mass, volume):
     :param volume in m**3
     :return: density in kg/m**3
     """
-    # TODO: Good practice in python is to name variables all lower case, constants all upper case and Class Names
-    #  like an english Noun. Please rename Volume into volume, since it is a variable
     if type(mass) not in [int, float] or type(volume) not in [int, float]:
         raise TypeError("Use int or float!")
     return mass / volume
@@ -95,8 +93,6 @@ def pressure(force, area):
     :param area in m**2
     :return: pressure in pascal
     """
-    # TODO: Good practice in python is to name variables all lower case, constants all upper case and Class Names
-    #  like an english Noun. Please rename Force into force, since it is a variable
     if type(force) not in [int, float] or type(area) not in [int, float]:
         raise TypeError("Use int or float!")
     return force / area
@@ -115,7 +111,6 @@ def velocity_with_time(velocity_at_the_beginnig, acceleration, time):
     """
     if type(velocity_at_the_beginnig) not in [int, float] or type(acceleration) not in [int, float] or type(time) not in [int, float]:
         raise TypeError("Use int or float!")
-    # TODO: This throws an error! The formula is missing.
     return velocity_at_the_beginnig + (acceleration * time)
 
 def displacement_with_acceleration(velocity_at_the_beginnig, acceleration, time):
