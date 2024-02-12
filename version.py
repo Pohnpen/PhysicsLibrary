@@ -3,7 +3,7 @@ TITLE = "Physics Library Console"
 MAJOR = 0
 MINOR = 1
 
-VERSION = f"{MAJOR}.{MINOR}"
+VERSION = f"{MAJOR}.{MINOR}" # 0.1
 VERSION_TAG = f"v{VERSION}"
 
 FULL_TITLE = f"{TITLE} {VERSION_TAG}"
