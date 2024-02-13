@@ -21,7 +21,6 @@ class SIBaseUnit():
     def __add__(self, other):
         if type(self) != type(other):
             raise TypeError("Can not add different tpyes of units!")
-
         return self.value + other.value
 
 class Meter(SIBaseUnit):
