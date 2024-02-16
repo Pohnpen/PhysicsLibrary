@@ -2,7 +2,7 @@
 Thermal Physics equations
 https://physics.info/equations/#eq-thermal
 """
-from constants.py import (
+from .constants import (
 SPECIFIC_LATENT_HEAT_STANDARDIZED_WATER_0_DEGREE,
 SPECIFIC_HEAT_CAPACITY_STANDARDIZED_WATER_0_DEGREE,
 GAS_CONSTANT, BOLTZMANN_CONSTANT

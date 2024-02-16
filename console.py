@@ -7,6 +7,7 @@ Console access to the functions of and help documentation of Physics Library Fun
 from version import FULL_TITLE
 from lib.mechanics import *
 from lib.thermal import *
+from lib.constants import *
 
 if __name__ == "__main__":
     print(f"{FULL_TITLE}")
